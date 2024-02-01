@@ -6,6 +6,7 @@ const Weather = (props) => (
       <p className="weather__key">
         Location:
         <span className="weather__value">
+          {" "}
           {props.city},{props.country}
         </span>
       </p>
@@ -13,7 +14,10 @@ const Weather = (props) => (
     {props.temperature && (
       <p className="weather__key">
         Temperature:
-        <span className="weather__value"> {props.temperature}</span>
+        <span className="weather__value">
+          {" "}
+          {(props.temperature * 9) / 5 + 32} F
+        </span>
       </p>
     )}
     {props.humidity && (
